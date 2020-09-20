@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Add book button ------------------------------- Below */
+.addBookButton {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(160, 151, 151);
+    border-radius: 50%;
+    position: fixed;
+    right: 15px;
+    top: 2%;
+    border-style: solid;
+    z-index: 9;
+}
+.addBookButton:hover {
+    background-color: rgba(0, 0, 0, 0.726);
+}
+.staticLine {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    left: 10%;
+    border-radius: 50%;
+}
+.animationLine {
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    background-color: white;
+    left: 48%;
+    bottom: 3px;
+    border-radius: 50%;
+}
+/* Add book button ------------------------------- Above */
+
+.hello {
+    position: relative;
+    z-index: -10;
+}
+h1 {
+    position: relative;
+    top: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-family: Playfair Display;
+}
+p {
+    text-align: center;
+    font-family: Quicksand;
+    position: relative;
+    top: 60px;
+}
+
+/* Add book form ------------------------------- Below */
+.addBookForm {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.397);
+    position: fixed;
+    right: -300px;
+    z-index: 2;
+}
+fieldset {
+    border: 1px solid #00000080;
+    color: #000000e1;
+    position: relative;
+    bottom: 9px;
+    width: 300px;
+    height: 308px;
+}
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    top: 15px;
+}
+legend {
+    font-family: Playfair Display;
+}
+.textInput {
+    font-family: Quicksand;
+    position: relative;
+    width: 174px;
+}
+.deleteButton {
+    width: 100px;
+    font-family: Quicksand;
+    border: none;
+    color: white;
+    background-color: rgb(160, 151, 151);
+}
+.deleteButton:hover {
+    background-color: rgba(0, 0, 0, 0.726);
+}
+.submitButton {
+    width: 100px;
+    font-family: Quicksand;
+    border: none;
+    color: white;
+    background-color: rgb(160, 151, 151);
+}
+.submitButton:hover {
+    background-color: rgba(0, 0, 0, 0.726);
+}
+label {
+    font-family: Quicksand;
+}
+/* Add book form ------------------------------- Above */
+
+.library {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    top: 90px;
+    gap: 20px;
+}
+.book {
+    width: 280px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.397);
+    border-radius: 10px;
+    border: 1px groove #00000080;
+    position: relative;
+}
+.bookData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.author {
+    font-family: Quicksand;
+}
+.title {
+    font-family: Quicksand;
+}
+.numberOfChapters {
+    font-family: Quicksand;
+}
+.isRead {
+    font-family: Quicksand;
+}
+.space {
+    width: 75%;
+    height: 1px;
+    background-color: #00000080;
+}
+.bookStatusButton {
+    background-image: url("./assets/30pxBook.png");
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.deleteBookButton {
+    background-image: url("./assets/30pxTrash.png");
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+body{
+    background-image: url(./assets/type-cinza.png);
+}

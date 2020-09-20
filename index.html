@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&family=Raleway:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@700&display=swap" rel="stylesheet"> 
+        <title>Library</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <button class="addBookButton">
+            <div class="staticLine"></div>
+            <div class="animationLine"></div>
+        </button>
+        <div class="hello">
+            <h1>Bookself</h1>
+            <p>Make and control your own library at your leisure</p>
+        </div>
+        <form class="addBookForm">
+            <fieldset>
+                <legend align='center'>Add your book</legend>
+                <div class="inputContainer">
+                    <input class="textInput" id="author" type="text" placeholder="Author" name="author" required>
+                    <input class="textInput" id="title" type="text" placeholder="Title" name="title" required>
+                    <input class="textInput" id="numberOfChapters" type="text" placeholder="Number of chapters" name="numberOfChapters" required>
+                    <div class="readingStatus">
+                        <input class="option" id="Reading" type="radio" name="status" value="Reading" required>
+                        <label for="Reading">Reading</label>
+                    </div>
+                    <div>
+                        <input class="option" id="Completed" type="radio" name="status" value="Completed" required>
+                        <label for="Completed">Completed</label>
+                    </div>
+                    <div>
+                        <input class="option" id="Not read yet" type="radio" name="status" value="Not read yet" required>
+                        <label for="Not read yet">Not read yet</label>
+                    </div>
+                    <div>
+                        <button class="deleteButton" type="reset">Reset</button>
+                        <button class="submitButton" type="submit">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="library">
+            <!-- where goes the books created in the script -->
+        </div>
+    </body>
+</html>
+<script src="./script.js"></script>
