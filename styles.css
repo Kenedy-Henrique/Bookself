@@ -198,7 +198,7 @@ label {
     background-color: #00000080;
 }
 .bookStatusButton {
-    background-image: url("./assets/30pxBook.png");
+    background-image: url("../src/assets/30pxBook.png");
     width: 30px;
     height: 30px;
     position: absolute;
@@ -208,7 +208,7 @@ label {
     background-color: rgba(255, 255, 255, 0);
 }
 .deleteBookButton {
-    background-image: url("./assets/30pxTrash.png");
+    background-image: url("../src/assets/30pxTrash.png");
     width: 30px;
     height: 30px;
     position: absolute;
@@ -218,5 +218,5 @@ label {
     background-color: rgba(255, 255, 255, 0);
 }
 body{
-    background-image: url(./assets/type-cinza.png);
+    background-image: url(../src/assets/type-cinza.png);
 }
