@@ -3,18 +3,38 @@ import addBookFormAnimation from './animations/formAnimation';
 import formSubmissionAnimation from './animations/formSubmissionAnimation';
 import makeBookDiv from './makeBookDiv';
 import makeBookObj from './makeBookObj';
+import renderBookDivsFromLocalStorage from './renderBookDivsFromLocalStorage';
 
 let libraryArray = [];
 let libraryHtmlConteiner = document.querySelector('.library');
+let libraryObj = {};
+
+if(localStorage.getItem('libraryObj')){
+  libraryObj = JSON.parse(localStorage.getItem('libraryObj'));
+  renderBookDivsFromLocalStorage(libraryHtmlConteiner, libraryObj);
+}
 
 function putTheBookInLibraryArray(bookObj){
     if(libraryArray.length === 0){
       libraryArray[libraryArray.length] = bookObj;
     } else libraryArray[libraryArray.length] = bookObj;
+    
+    libraryObj[bookObj.title] = bookObj;
+    localStorage.setItem('libraryObj', JSON.stringify(libraryObj));
 }
 
 function updateLibraryArray(libraryArray){
-  makeBookDiv(libraryArray[libraryArray.length-1].author, libraryArray[libraryArray.length-1].title, libraryArray[libraryArray.length-1].numberOfChapters, libraryArray[libraryArray.length-1].isRead, libraryArray[libraryArray.length-1], libraryHtmlConteiner);
+  let objArrayPosition = [libraryArray.length-1];
+  makeBookDiv(
+    libraryArray[libraryArray.length-1].author,
+    libraryArray[libraryArray.length-1].title,
+    libraryArray[libraryArray.length-1].numberOfChapters,
+    libraryArray[libraryArray.length-1].isRead,
+    libraryArray[libraryArray.length-1],
+    libraryHtmlConteiner,
+    libraryArray,
+    objArrayPosition,
+    libraryObj);
 }
 
 //Add book button animation ------------------------------- Below

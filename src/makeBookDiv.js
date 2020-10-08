@@ -1,4 +1,4 @@
-function makeBookDiv(author, title, numberOfChapters, isRead, currentBook, libraryHtmlConteiner){
+function makeBookDiv(author, title, numberOfChapters, isRead, currentBook, libraryHtmlConteiner, libraryArray, objArrayPosition, libraryObj){
     //
     let book = document.createElement('div');
     book.classList.add('book');
@@ -50,11 +50,14 @@ function makeBookDiv(author, title, numberOfChapters, isRead, currentBook, libra
     //
     deleteBookButton.addEventListener('click', () => {
       libraryHtmlConteiner.removeChild(book);
-      let temporary = [];
-      currentBook = temporary;
-      currentBook = library[length.length-1];
-      library[library.length-1] = temporary;
-      library.pop();
+
+      delete libraryObj[currentBook.title];
+      localStorage.setItem('libraryObj', JSON.stringify(libraryObj));
+
+      let temporaryObj = libraryArray[libraryArray.length-1];
+      libraryArray[libraryArray.length-1] = currentBook;
+      libraryArray[objArrayPosition] = temporaryObj;
+      libraryArray.pop();
     })
 }
 

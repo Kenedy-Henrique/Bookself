@@ -20,7 +20,6 @@ function makeBookObj(author, title, numberOfChapters, isRead){
     obj.title = title;
     obj.numberOfChapters = numberOfChapters;
     obj.isRead = isRead;
-    console.log(obj);
     
     return obj;
 }
